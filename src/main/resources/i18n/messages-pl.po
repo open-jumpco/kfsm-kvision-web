@@ -40,7 +40,7 @@ msgstr "Przechodzić"
 
 #: src/main/kotlin/com/example/TurnstileView.kt:28
 msgid "state"
-msgstr "State"
+msgstr "Stanów"
 
 #: src/main/kotlin/com/example/App.kt:32
 #: src/main/kotlin/com/example/TurnstileView.kt:43
