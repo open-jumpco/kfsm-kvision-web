@@ -6,6 +6,7 @@ plugins {
     val kotlinVersion: String by System.getProperties()
     id("kotlinx-serialization") version kotlinVersion
     kotlin("js") version kotlinVersion
+    id("io.jumpco.open.kfsm.viz-plugin") version "1.4.0"
 }
 
 version = "1.0.0-SNAPSHOT"
@@ -125,5 +126,19 @@ afterEvaluate {
             inputs.files(distribution, webDir)
             outputs.file(archiveFile)
         }
+    }
+}
+
+val assemble by tasks.existing {
+    dependsOn("generateFsmViz")
+}
+
+configure<io.jumpco.open.kfsm.gradle.VizPluginExtension> {
+    fsm("TurnstileFSM") {
+        outputFolder = file("generated")
+        input = file("src/main/kotlin/com/example/kfsm/Turnstile.kt")
+        isGeneratePlantUml = true // Required default is false
+        isGenerateAsciidoc = true // Required default is false
+        output = "turnstile"
     }
 }
