@@ -33,9 +33,9 @@ kotlin {
         browser {
             runTask {
                 outputFileName = "main.bundle.js"
-                sourceMaps = false
+                sourceMaps = true
                 devServer = KotlinWebpackConfig.DevServer(
-                    open = false,
+                    open = true,
                     port = 3000,
                     proxy = mapOf(
                         "/kv/*" to "http://localhost:8080",
