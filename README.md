@@ -11,6 +11,6 @@ We are using the classic Turnstile FSM. The UI provides for creating multiple in
 
 ## FSM Visualisation
 
-This project also demonstrates how to configure the `kfsm-viz-plugin` to create a state diagram and [state map](turnstile.html).
+This project also demonstrates how to configure the `kfsm-viz-plugin` to create a state diagram and [state map](turnstile.pdf).
 
 ![state diagram](turnstile.png)
