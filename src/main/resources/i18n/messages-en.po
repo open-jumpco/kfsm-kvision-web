@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the KVision package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: KVision\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-18 01:34+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../src/main/kotlin/com/example/App.kt:20
+msgid "This is a localized message."
+msgstr ""
+
+#: src/main/kotlin/com/example/TurnstileView.kt:22
+msgid "coin"
+msgstr "Coin"
+
+#: src/main/kotlin/com/example/App.kt:34
+msgid "create"
+msgstr "Create"
+
+#: src/main/kotlin/com/example/TurnstileView.kt:26
+msgid "delete"
+msgstr "Delete"
+
+#: src/main/kotlin/com/example/TurnstileView.kt:20
+msgid "pass"
+msgstr "Pass"
+
+#: src/main/kotlin/com/example/TurnstileView.kt:28
+msgid "state"
+msgstr "State"
+
+#: src/main/kotlin/com/example/App.kt:32
+#: src/main/kotlin/com/example/TurnstileView.kt:43
+msgid "turnstile"
+msgstr "Turnstile"
+
