@@ -2,7 +2,7 @@ package com.example
 
 import com.example.kfsm.TurnstileState
 import kotlinx.serialization.Serializable
-import pl.treksoft.kvision.state.ObservableValue
+import io.kvision.state.ObservableValue
 
 @Serializable
 class TurnstileComponentState(val number: Int, var locked: Boolean, var state: TurnstileState? = null)

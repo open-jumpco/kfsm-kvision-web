@@ -58,16 +58,15 @@ kotlin {
     }
     sourceSets["main"].dependencies {
         implementation("io.jumpco.open:kfsm-js:$kfsmVersion")
-        implementation("pl.treksoft:kvision:$kvisionVersion")
-        implementation("pl.treksoft:kvision-bootstrap:$kvisionVersion")
-        implementation("pl.treksoft:kvision-bootstrap-css:$kvisionVersion")
-        implementation("pl.treksoft:kvision-fontawesome:$kvisionVersion")
-        implementation("pl.treksoft:kvision-i18n:$kvisionVersion")
-        implementation("pl.treksoft:kvision-datacontainer:$kvisionVersion")
+        implementation("io.kvision:kvision:$kvisionVersion")
+        implementation("io.kvision:kvision-bootstrap:$kvisionVersion")
+        implementation("io.kvision:kvision-bootstrap-css:$kvisionVersion")
+        implementation("io.kvision:kvision-fontawesome:$kvisionVersion")
+        implementation("io.kvision:kvision-i18n:$kvisionVersion")
     }
     sourceSets["test"].dependencies {
         implementation(kotlin("test-js"))
-        implementation("pl.treksoft:kvision-testutils:$kvisionVersion")
+        implementation("io.kvision:kvision-testutils:$kvisionVersion")
     }
     sourceSets["main"].resources.srcDir(webDir)
 }

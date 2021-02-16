@@ -1,18 +1,18 @@
 package com.example
 
-import pl.treksoft.kvision.Application
-import pl.treksoft.kvision.core.*
-import pl.treksoft.kvision.i18n.DefaultI18nManager
-import pl.treksoft.kvision.i18n.I18n
-import pl.treksoft.kvision.i18n.tr
-import pl.treksoft.kvision.module
-import pl.treksoft.kvision.navbar.nav
-import pl.treksoft.kvision.navbar.navLink
-import pl.treksoft.kvision.navbar.navbar
-import pl.treksoft.kvision.panel.flexPanel
-import pl.treksoft.kvision.panel.root
-import pl.treksoft.kvision.require
-import pl.treksoft.kvision.startApplication
+import io.kvision.Application
+import io.kvision.core.*
+import io.kvision.i18n.DefaultI18nManager
+import io.kvision.i18n.I18n
+import io.kvision.i18n.tr
+import io.kvision.module
+import io.kvision.navbar.nav
+import io.kvision.navbar.navLink
+import io.kvision.navbar.navbar
+import io.kvision.panel.flexPanel
+import io.kvision.panel.root
+import io.kvision.require
+import io.kvision.startApplication
 
 class App : Application() {
     init {

@@ -1,15 +1,14 @@
 package com.example
 
 import com.example.kfsm.Turnstile
-import com.example.kfsm.TurnstileEvent
 import com.example.kfsm.TurnstileFSM
 import com.example.kfsm.TurnstileState
+import io.kvision.panel.VPanel
+import io.kvision.state.ObservableValue
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import pl.treksoft.kvision.panel.VPanel
-import pl.treksoft.kvision.state.ObservableValue
-import kotlin.text.Typography.nbsp
+
 
 abstract class TurnstileWeb(locked: Boolean) : VPanel(classes = setOf("card")), Turnstile {
 
@@ -17,8 +16,8 @@ abstract class TurnstileWeb(locked: Boolean) : VPanel(classes = setOf("card")), 
     private var _locked: Boolean
     override val locked: Boolean get() = _locked
 
-    val messageText = ObservableValue<String>("$nbsp")
-    val errorText = ObservableValue<String>("$nbsp")
+    val messageText = ObservableValue<String>("")
+    val errorText = ObservableValue<String>("")
     val state: ObservableValue<TurnstileState>
 
     init {
@@ -41,7 +40,7 @@ abstract class TurnstileWeb(locked: Boolean) : VPanel(classes = setOf("card")), 
         if (text.trim().isNotEmpty()) {
             GlobalScope.launch {
                 delay(2000)
-                messageText.value = "$nbsp"
+                messageText.value = ""
             }
         }
     }
@@ -51,7 +50,7 @@ abstract class TurnstileWeb(locked: Boolean) : VPanel(classes = setOf("card")), 
         if (error.trim().isNotEmpty()) {
             GlobalScope.launch {
                 delay(5000)
-                errorText.value = "$nbsp"
+                errorText.value = ""
             }
         }
     }
@@ -64,16 +63,16 @@ abstract class TurnstileWeb(locked: Boolean) : VPanel(classes = setOf("card")), 
         require(!locked) { "Expected to be unlocked" }
         _locked = true
         console.log("lock")
-        updateMessage("$nbsp")
-        updateError("$nbsp")
+        updateMessage("")
+        updateError("")
     }
 
     override suspend fun unlock() {
         require(locked) { "Expected to be locked" }
         _locked = false
         console.log("unlock")
-        updateMessage("$nbsp")
-        updateError("$nbsp")
+        updateMessage("")
+        updateError("")
     }
 
     override suspend fun returnCoin() {

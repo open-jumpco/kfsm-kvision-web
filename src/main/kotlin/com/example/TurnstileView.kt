@@ -1,12 +1,12 @@
 package com.example
 
 import com.example.kfsm.TurnstileEvent
+import io.kvision.core.*
+import io.kvision.html.*
+import io.kvision.i18n.tr
+import io.kvision.panel.flexPanel
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import pl.treksoft.kvision.core.*
-import pl.treksoft.kvision.html.*
-import pl.treksoft.kvision.i18n.tr
-import pl.treksoft.kvision.panel.flexPanel
 import kotlin.text.Typography.nbsp
 
 class TurnstileView(
@@ -20,8 +20,8 @@ class TurnstileView(
         Button(tr("pass"), icon = "fas fa-door-open", classes = setOf("btn", "btn-primary", "m-2"))
     private val coinButton =
         Button(tr("coin"), icon = "fab fa-cc-visa", classes = setOf("btn", "btn-secondary", "m-2"))
-    private val text = Span(content = "$nbsp", classes = setOf("m-2"))
-    private val error = Span(content = "$nbsp", classes = setOf("m-2"))
+    private val text = Span(content = "", classes = setOf("m-1"))
+    private val error = Span(content = "", classes = setOf("m-1"))
     private val deleteButton =
         Button(tr("delete"), icon = "fas fa-trash", classes = setOf("btn", "btn-warn", "m-2"))
     private val stateSpan = Span("")
@@ -42,9 +42,14 @@ class TurnstileView(
         div(classes = setOf("card-body", "p-0")) {
             h5(classes = setOf("m-2")).add(Span(tr("turnstile"))).add(Span(":$nbsp")).add(Span(number.toString()))
             add(stateSubTitle)
-            p {
-                add(text)
-                add(error)
+            div(classes = setOf("row", "mb-4")) {
+                div(classes = setOf("col-5", "offset-1")) {
+                    add(error)
+                }
+                div("$nbsp", className = "col-1") {}
+                div(className = "col-5") {
+                    add(text)
+                }
             }
             flexPanel(
                 direction = FlexDirection.ROW,
