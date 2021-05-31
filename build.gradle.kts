@@ -6,7 +6,7 @@ plugins {
     val kotlinVersion: String by System.getProperties()
     id("kotlinx-serialization") version kotlinVersion
     kotlin("js") version kotlinVersion
-    id("io.jumpco.open.kfsm.viz-plugin") version "1.4.0"
+    id("io.jumpco.open.kfsm.viz-plugin") version "1.4.32.1"
 }
 
 version = "1.0.0-SNAPSHOT"
