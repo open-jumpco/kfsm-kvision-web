@@ -1,0 +1,19 @@
+= KFSM for KVision Demo
+
+image::https://i.creativecommons.org/l/by-sa/4.0/88x31.png[link=http://creativecommons.org/licenses/by-sa/4.0/]
+This work is licensed under a link:http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0 International License].
+
+This is demonstration of using KFSM to create an FSM for use in the UI.
+We are using the classic Turnstile FSM. The UI provides for creating multiple instances.
+
+== Running
+* `./gradlew run` - Starts a webpack dev server on port 3000.
+
+== FSM Visualisation
+
+This project also demonstrates how to configure the `kfsm-viz-plugin` to create a state-diagram and a state-map
+
+image:turnstile.png[state-diagram]
+
+include::generated/turnstile.adoc[]
+
