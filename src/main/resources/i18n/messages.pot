@@ -5,25 +5,25 @@ msgstr ""
 
 #: src/main/kotlin/com/example/TurnstileView.kt:22
 msgid "coin"
-msgstr "Coin"
+msgstr ""
 
 #: src/main/kotlin/com/example/App.kt:34
 msgid "create"
-msgstr "Create"
+msgstr ""
 
 #: src/main/kotlin/com/example/TurnstileView.kt:26
 msgid "delete"
-msgstr "Delete"
+msgstr ""
 
 #: src/main/kotlin/com/example/TurnstileView.kt:20
 msgid "pass"
-msgstr "Pass"
+msgstr ""
 
 #: src/main/kotlin/com/example/TurnstileView.kt:28
 msgid "state"
-msgstr "State"
+msgstr ""
 
 #: src/main/kotlin/com/example/App.kt:32
 #: src/main/kotlin/com/example/TurnstileView.kt:43
 msgid "turnstile"
-msgstr "Turnstile"
+msgstr ""

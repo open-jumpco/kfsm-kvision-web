@@ -6,20 +6,19 @@ plugins {
     val kotlinVersion: String by System.getProperties()
     id("kotlinx-serialization") version kotlinVersion
     kotlin("js") version kotlinVersion
-    id("io.jumpco.open.kfsm.viz-plugin") version "1.4.32.1"
+    id("io.jumpco.open.kfsm.viz-plugin") version "1.5.0"
 }
 
-version = "1.0.0-SNAPSHOT"
+version = "1.5.0-SNAPSHOT"
 group = "com.example.kfsm"
 
 repositories {
+    mavenLocal()
     mavenCentral()
-    jcenter()
     maven { url = uri("https://dl.bintray.com/kotlin/kotlin-eap") }
     maven { url = uri("https://kotlin.bintray.com/kotlinx") }
     maven { url = uri("https://dl.bintray.com/kotlin/kotlin-js-wrappers") }
     maven { url = uri("https://dl.bintray.com/rjaros/kotlin") }
-    mavenLocal()
 }
 
 // Versions
@@ -38,11 +37,11 @@ kotlin {
                 devServer = KotlinWebpackConfig.DevServer(
                     open = true,
                     port = 3000,
-                    proxy = mapOf(
+                    proxy = mutableMapOf(
                         "/kv/*" to "http://localhost:8080",
                         "/kvws/*" to mapOf("target" to "ws://localhost:8080", "ws" to true)
                     ),
-                    contentBase = listOf("$buildDir/processedResources/js/main")
+                    static = mutableListOf("$buildDir/processedResources/js/main")
                 )
             }
             webpackTask {
